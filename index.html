@@ -1,43 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | REJOUICE®</title>
-    <link rel="shortcut icon" href="https://rejouice.com/assets/favicon/32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="shortcut icon"
+      href="https://rejouice.com/assets/favicon/32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- https://rejouice.com -->
-</head>
-<body>
+  </head>
+  <body>
     <section id="main">
-        <section id="hero">
-           <div class="hero-content">
-            <nav><div class="logo"><h1>The Venture Agency.</h1></div>
-                <div class="menu">
-                    <h1 class="btn">Menu <span></span></h1>
-                </div>
-                </nav>
-
-                <div class="hero-text">
-
-                    <div class="hero-h1">
-                        rejouice
-                    </div>
-                </div>
-           </div>
-            <video class="hero-video" src="./heroVideo.mp4" autoplay loop muted></video>
-
-            <div class="hero-cursor">
-                <span>Play Reel</span>
+      <section id="hero">
+        <div class="hero-content">
+          <nav>
+            <div class="logo"><h1>The Venture Agency.</h1></div>
+            <div class="menu">
+              <h1 class="btn menu-btn">Menu <span></span></h1>
             </div>
-        </section>
-        <section id="sample">
-                <h1 class="btn">SAMPLE <span></span></h1>
-              
-        </section>
+          </nav>
+
+          <div class="hero-text">
+            <div class="hero-h1">rejouice</div>
+          </div>
+        </div>
+        <video
+          class="hero-video"
+          src="./heroVideo.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+
+        <div class="hero-cursor">
+          <span>Play Reel</span>
+        </div>
+        <div class="navbar">
+          <h1 class="btn close-btn">Close <span></span></h1>
+          <div class="navbar-main">
+            <div class="navbar-box">
+              <h1>rejouice</h1>
+              <div class="navbar-video">
+                <video src="./navbarVideo.mp4" muted autoplay loop></video>
+              </div>
+              <div class="navbar-box-play">
+                <div class="navbar-box-play-left">
+                  <i class="fa-solid fa-play"></i>
+                  <h1 class="btn">Play reel <span></span></h1>
+                </div>
+                <div class="navbar-box-play-right">
+                  <h1>-01:18</h1>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="#">
+                  <h1 class="btn menu-btn btn-nav">
+                    <div>Home</div>
+                    <div>Home</div>
+                    <span></span>
+                  </h1>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h1 class="btn menu-btn btn-nav">
+                    <div>Work</div>
+                    <div>Work</div>
+                    <span></span>
+                  </h1>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h1 class="btn menu-btn btn-nav">
+                    <div>Services</div>
+                    <div>Services</div>
+                    <span></span>
+                  </h1>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h1 class="btn menu-btn btn-nav">
+                    <div>About</div>
+                    <div>About</div>
+                    <span></span>
+                  </h1>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h1 class="btn menu-btn btn-nav">
+                    <div>Contact</div>
+                    <div>Contact</div>
+                    <span></span>
+                  </h1>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn-main">
+                  <div>Take a seat</div>
+                  <div>Take a seat</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-footer">
+            <h1>Tomorrow's Brands, Today.™</h1>
+            <hr class="navbar-hr">
+            <div class="navbar-footer-right">
+              <a href="#"
+                ><h1 class="btn">X<span></span></h1>
+                <i class="fa-solid fa-arrow-right"></i
+              ></a>
+              <a href="#"
+                ><h1 class="btn">Instagram<span></span></h1>
+                <i class="fa-solid fa-arrow-right"></i
+              ></a>
+              <a href="#"
+                ><h1 class="btn">LinkedIn<span></span></h1>
+                <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sample"></section>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

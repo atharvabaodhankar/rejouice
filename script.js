@@ -1,6 +1,7 @@
 var heroCursor = document.querySelector(".hero-cursor");
 var heroSection = document.querySelector(".hero-content");
 var heroSectionMain = document.querySelector("#hero");
+var menuBar = document.querySelector(".menu");
 
 
 heroSection.addEventListener("mousemove", (dets) => {
@@ -23,6 +24,20 @@ heroSectionMain.addEventListener("mouseleave", () => {
     gsap.to(heroCursor, {
         scale: 0,
         opacity : 0,
+    })
+})
+menuBar.addEventListener("mouseenter", () => {
+
+    gsap.to(heroCursor, {
+        scale: 0,
+        opacity : 0,
+    })
+})
+menuBar.addEventListener("mouseleave", () => {
+
+    gsap.to(heroCursor, {
+        scale: 1,
+        opacity : 1,
     })
 })
 
@@ -54,3 +69,57 @@ btn.forEach((elem) => {
     })
     
 })
+
+
+menuBar.onclick = () => {
+    menuBar.classList.toggle("active");
+    heroSectionMain.classList.toggle("active");
+    gsap.to(".navbar-video", {
+        scale: 1,
+        delay : 0.4,
+        duration: 1.5,
+        ease : "power3"
+    })
+    gsap.from(".navbar-main ul li", {
+        y: 100,
+        opacity: 0,
+        delay : 0.6,
+        ease: "expo.out",
+        stagger: 0.05,
+        duration : 1,
+    })
+    gsap.from(".navbar-footer h1 , navbar-footer a", {
+        x:100,
+        opacity: 0,
+        delay : 0.6,
+        stagger: 0.05,
+        duration : 1,
+    })
+    gsap.to(".navbar-main ul", {
+        opacity: 1,
+        ease: "power4.in",
+        y: 0,
+    })
+    gsap.from(".navbar-hr", {
+        width: "30%",
+        duration : 1,
+        delay : 0.5,      
+    })
+}
+document.querySelector(".close-btn").onclick = () => {
+    menuBar.classList.remove("active");
+    heroSectionMain.classList.remove("active");
+    gsap.to(".navbar-video", {
+        scale: 0,
+        duration: 1.5,
+        ease : "power3"
+    })
+    gsap.to(".navbar-main ul", {
+        y: 200,
+        ease: "power4.in",
+        opacity: 0,
+        ease: "expo.out",
+        duration:1.5
+    })
+}
+
