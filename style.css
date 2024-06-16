@@ -355,6 +355,7 @@ nav h1{
     justify-content: center;
     flex-direction: column;
     padding: 10rem 0;
+    user-select: none;
 }
 .page2-header{
     display: flex;
