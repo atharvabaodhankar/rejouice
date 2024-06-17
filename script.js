@@ -113,11 +113,8 @@ function menuAnimation() {
     });
   };
 }
-function page2Animation()
-{
-    
-
-gsap.to(".page2-hr", {
+function page2Animation() {
+  gsap.to(".page2-hr", {
     width: "100%",
     ease: "power2.out",
     scrollTrigger: {
@@ -129,55 +126,185 @@ gsap.to(".page2-hr", {
     },
   });
 
+  if (window.matchMedia("(min-width : 900px)").matches) {
+    var content = document.querySelector(".page2-main p").textContent;
+    const linesSpans = content.split(/\s+/);
+    var page2Lines = document.querySelector(".page2-main");
 
-if (window.matchMedia("(min-width : 900px)").matches) {
-  var content = document.querySelector(".page2-main p").textContent;
-  const linesSpans = content.split(/\s+/);
-  var page2Lines = document.querySelector(".page2-main");
+    page2Lines.innerHTML = "";
+    var page2MainLine = "";
+    linesSpans.forEach((ele) => {
+      ele += "&nbsp;";
+      page2MainLine += `<p>${ele}</p> `;
+    });
+    page2Lines.innerHTML = page2MainLine;
 
-  page2Lines.innerHTML = "";
-  var page2MainLine = "";
-  linesSpans.forEach((ele) => {
-    ele += "&nbsp;";
-    page2MainLine += `<p>${ele}</p> `;
-  });
-  page2Lines.innerHTML = page2MainLine;
-
-  gsap.from(".page2-main p , .page2-header-main h1", {
-    y: 100,
-    stagger: 0.4,
-    duration: 3,
-    skewY: -7,
-    ease: "power2.out",
-    opacity: 0,
-    scrollTrigger: {
-      trigger: "#page2",
-      scroller: "body",
-      start: "top 47%",
-      end: "top 10%",
-      scrub: 3,
-    },
-  });
-} else {
-  gsap.from(".page2-main p , .page2-header-main h1", {
-    y: 100,
-    stagger: 0.4,
-    duration: 3,
-    skewY: -7,
-    ease: "power2.out",
-    opacity: 0,
-    scrollTrigger: {
-      trigger: "#page2",
-      scroller: "body",
-      start: "top 47%",
-      end: "top 47%",
-      scrub: 3,
-    },
-  });
+    gsap.from(".page2-main p , .page2-header-main h1", {
+      y: 100,
+      stagger: 0.4,
+      duration: 3,
+      skewY: -7,
+      ease: "power2.out",
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#page2",
+        scroller: "body",
+        start: "top 47%",
+        end: "top 10%",
+        scrub: 3,
+      },
+    });
+  } else {
+    gsap.from(".page2-main p , .page2-header-main h1", {
+      y: 100,
+      stagger: 0.4,
+      duration: 3,
+      skewY: -7,
+      ease: "power2.out",
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#page2",
+        scroller: "body",
+        start: "top 47%",
+        end: "top 47%",
+        scrub: 3,
+      },
+    });
+  }
 }
+
+function page3Animation() {
+  document.querySelector(".page3-header-text").onmouseover = () => {
+    let p3tl = gsap.timeline();
+
+    p3tl.to(".page3-header-text", {
+      "--left": "100%",
+    });
+    p3tl.to(".page3-header-text", {
+      "--left": "-70px",
+    });
+  };
+  document.querySelector(".page3-header-text").onmouseleave = () => {
+    let p3tl1 = gsap.timeline();
+
+    p3tl1.to(".page3-header-text", {
+      "--left": "100%",
+    });
+    p3tl1.to(".page3-header-text", {
+      "--left": "-70px",
+    });
+  };
+
+
+  if (window.matchMedia("(max-width : 500px)").matches) {
+    document.querySelector(
+      ".page3-header-text"
+    ).innerHTML = `<h1><span>Explore our</span></h1> <br>
+<h1><span>services</span></h1> <br>
+<h1><span>and</span></h1> <br>
+<h1><span>engagement models</span></h1> <br>`;
+  }
+  
+  gsap.from(".page3-header-text h1 span", {
+    y: 100,
+    opacity: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      scroller: "body",
+      trigger : ".page3-header-text",
+      start: "top 70%",
+      end: "bottom center",
+      scrub : 3
+    }
+  })
+
+  if (window.matchMedia("(min-width : 900px)").matches) 
+  {
+    gsap.from(".p3-box-1", {
+      x: 400,
+      scale : 0.7,
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger : ".page3-grid-main",
+        start: "top 70%",
+        end: "bottom center",
+        scrub : 3
+      }
+    })
+    gsap.from(".p3-box-2", {
+      scale : 0.8,
+      opacity: 0.6,
+      ease: "power2.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger : ".page3-grid-main",
+        start: "top 70%",
+        end: "bottom center",
+        scrub : 3
+      }
+    })
+    
+    gsap.from(".p3-box-3", {
+      x: -400,
+      scale : 0.7,
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger : ".page3-grid-main",
+        start: "top 70%",
+        end: "bottom center",
+        scrub : 3
+      }
+    })
+  }
+  else
+  {
+    gsap.from(".p3-box-1", {
+      x: 100,
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger : ".p3-box-1",
+        start: "top 70%",
+        end: "bottom center",
+        scrub : 3
+      }
+    })
+    gsap.from(".p3-box-2", {
+      x: -100,
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger : ".p3-box-2",
+        start: "top 70%",
+        end: "bottom center",
+        scrub : 3
+      }
+    })
+    
+    gsap.from(".p3-box-3", {
+      x: 100,
+      scale : 0.7,
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger : ".p3-box-3",
+        start: "top 70%",
+        end: "bottom center",
+        scrub : 3
+      }
+    })
+    }
+  
+  
 }
 mouseHover();
 menuAnimation();
 page2Animation();
-
-
+page3Animation();
