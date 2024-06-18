@@ -204,107 +204,163 @@ function page3Animation() {
 <h1><span>and</span></h1> <br>
 <h1><span>engagement models</span></h1> <br>`;
   }
-  
+
   gsap.from(".page3-header-text h1 span", {
     y: 100,
     opacity: 0,
     ease: "power2.out",
     scrollTrigger: {
       scroller: "body",
-      trigger : ".page3-header-text",
+      trigger: ".page3-header-text",
       start: "top 70%",
       end: "bottom center",
-      scrub : 3
-    }
-  })
+      scrub: 3,
+    },
+  });
 
-  if (window.matchMedia("(min-width : 900px)").matches) 
-  {
+  if (window.matchMedia("(min-width : 900px)").matches) {
     gsap.from(".p3-box-1", {
       x: 400,
-      scale : 0.7,
+      scale: 0.7,
       opacity: 0,
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger : ".page3-grid-main",
+        trigger: ".page3-grid-main",
         start: "top 70%",
         end: "bottom center",
-        scrub : 3
-      }
-    })
+        scrub: 3,
+      },
+    });
     gsap.from(".p3-box-2", {
-      scale : 0.8,
+      scale: 0.8,
       opacity: 0.6,
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger : ".page3-grid-main",
+        trigger: ".page3-grid-main",
         start: "top 70%",
         end: "bottom center",
-        scrub : 3
-      }
-    })
-    
+        scrub: 3,
+      },
+    });
+
     gsap.from(".p3-box-3", {
       x: -400,
-      scale : 0.7,
+      scale: 0.7,
       opacity: 0,
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger : ".page3-grid-main",
+        trigger: ".page3-grid-main",
         start: "top 70%",
         end: "bottom center",
-        scrub : 3
-      }
-    })
-  }
-  else
-  {
+        scrub: 3,
+      },
+    });
+  } else {
     gsap.from(".p3-box-1", {
       x: 100,
       opacity: 0,
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger : ".p3-box-1",
+        trigger: ".p3-box-1",
         start: "top 70%",
         end: "bottom center",
-        scrub : 3
-      }
-    })
+        scrub: 3,
+      },
+    });
     gsap.from(".p3-box-2", {
       x: -100,
       opacity: 0,
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger : ".p3-box-2",
+        trigger: ".p3-box-2",
         start: "top 70%",
         end: "bottom center",
-        scrub : 3
-      }
-    })
-    
+        scrub: 3,
+      },
+    });
+
     gsap.from(".p3-box-3", {
       x: 100,
-      scale : 0.7,
+      scale: 0.7,
       opacity: 0,
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger : ".p3-box-3",
+        trigger: ".p3-box-3",
         start: "top 70%",
         end: "bottom center",
-        scrub : 3
-      }
-    })
+        scrub: 3,
+      },
+    });
+  }
+}
+
+function page4Animation() {
+  gsap.from(".page4-header h1", {
+    y: 100,
+    opacity: 0,
+    skewY: 10,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page4-header",
+      scrub: 2,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+  gsap.from(".page4-main p", {
+    y: 100,
+    opacity: 0,
+    skewY: 10,
+    skewX: 10,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page4-main",
+      scrub: 2,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+  gsap.from(".page4-hr", {
+    width: "0%",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page4-header",
+      scrub: 2,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+}
+
+function page5Animation() {
+  gsap.to("#page5 svg", {
+    rotate: "200deg",
+    duration : 3,
+    scrollTrigger: "#page5",
+    ease: "power2",
+  });
+  gsap.from(".page5-span", {
+    opacity: 0,
+    y : -100,
+    scrollTrigger: {
+      trigger: "#page5",
+      start: "top 60%",
+      end: "top 40%",
+      scroller: "body",
+      scrub : 3,
     }
-  
-  
+  })
+
 }
 mouseHover();
 menuAnimation();
 page2Animation();
 page3Animation();
+page4Animation();
+page5Animation();
