@@ -554,38 +554,45 @@ nav h1 {
     font-size: 3rem;
     font-weight: 300;
 }
-.page3-grid-main{
+
+.page3-grid-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 75vh;
 }
-.page3-grid-box{
+
+.page3-grid-box {
     width: 32%;
     height: 100%;
     position: relative;
     cursor: pointer;
 }
-.page3-grid-box img{
+
+.page3-grid-box img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all .5s ease;
 }
-.page3-grid-box video{
+
+.page3-grid-box video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.page3-grid-box:hover img{
+
+.page3-grid-box:hover img {
     opacity: 0;
 }
-.p3-box-2{
+
+.p3-box-2 {
     z-index: 2;
 }
-.page3-grid-logo{
+
+.page3-grid-logo {
     width: 100%;
     height: 100%;
     top: 0;
@@ -595,14 +602,16 @@ nav h1 {
     align-items: flex-end;
     justify-content: center;
 }
-.page3-grid-logo img{
+
+.page3-grid-logo img {
     width: 150px;
     height: auto;
     opacity: 1 !important;
     margin-bottom: 10rem;
 }
+
 /* Page 4 */
-#page4{
+#page4, #page6 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -611,7 +620,8 @@ nav h1 {
     user-select: none;
     overflow: hidden;
 }
-.page4-header{
+
+.page4-header, .page6-header {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -619,44 +629,53 @@ nav h1 {
     width: 90%;
     margin-bottom: 3rem;
 }
-.page4-hr{
+
+.page4-hr, .page6-hr {
     width: 100%;
     margin-top: 1.5rem;
 }
-.page4-header h1{
+
+.page4-header h1, .page6-header h1 {
     font-size: 3rem;
     font-weight: 200;
 }
-.page4-main {
+
+.page4-main, .page6-main {
     width: 90%;
 }
-.page4-main p {
+
+.page4-main p, .page6-main p {
     font-size: 4.2vw;
     line-height: 4.5vw;
     display: inline-block;
 }
+
 /* Page 5 */
-#page5{
+#page5 {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     height: 100vh;
 }
-#page5 video{
+
+#page5 video {
     height: 100%;
     position: absolute;
 }
-#page5 svg{
+
+#page5 svg {
     position: absolute;
     height: 60%;
 }
-.page5-box{
+
+.page5-box {
     display: flex;
     height: 8rem;
     overflow: hidden;
 }
-.page5-span{
+
+.page5-span {
     font-size: 8rem;
     color: #fff;
     display: flex;
@@ -664,26 +683,108 @@ nav h1 {
     justify-content: flex-start;
     flex-direction: column;
 }
-.page5-content{
+
+.page5-content {
     position: absolute;
     text-align: center;
 }
-.page5-content h2{
+
+.page5-content h2 {
     font-size: 3rem;
     color: #fff;
     font-weight: 200;
 }
-.page5-content-inner{
+
+.page5-content-inner {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.page5-content-inner h1{
+
+.page5-content-inner h1 {
     font-size: 6rem;
     font-weight: 200;
     margin-left: 1rem;
     color: #fff;
 }
+
+/* Page 7 */
+#page7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+
+.page7-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.page7-header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.page7-header-main h2 {
+    font-family: rejouice;
+    font-weight: 200;
+    font-size: 8vw;
+}
+
+.page7-header-main h1 {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.page7-hr {
+    width: 100%;
+}
+
+.page7-swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: -60px;
+}
+.swiper-wrapper{
+    display: flex;
+    align-items: flex-end;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 450px;
+    user-select: none;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 900px) {
     .navbar-box {
         display: none;
@@ -715,7 +816,7 @@ nav h1 {
         margin-bottom: 2rem;
     }
 
-    .page2-main p ,.page4-main p{
+    .page2-main p, .page4-main p, .page6-main p {
         font-size: 5.2vw;
         line-height: 5.5vw;
     }
@@ -727,14 +828,22 @@ nav h1 {
     .page3-header-box h3 {
         font-size: 2rem;
     }
+
     .page3-grid-main {
         flex-direction: column;
         height: auto;
     }
-    .page3-grid-box{
+
+    .page3-grid-box {
         margin: 2.5rem 0;
         width: 70%;
         height: 60vh;
+    }
+    .swiper-slide {
+        width: 285px;
+    }
+    .swiper {
+        margin-top: -35px;
     }
 }
 
@@ -747,27 +856,45 @@ nav h1 {
         text-decoration: underline 2px #000;
         text-underline-offset: 4px;
     }
+
     .page3-grid-header h1 {
         font-size: 2rem;
         margin: 0 2rem;
         font-weight: 300;
     }
-    .page4-header h1 {
+
+    .page4-header h1, .page6-header h1 {
         font-size: 2.5rem;
     }
+
     #page5 svg {
         height: auto;
         width: 60%;
     }
+
     #page5 video {
         height: auto;
         width: 100%;
     }
+
     .page5-content-inner h1 {
         font-size: 3rem;
     }
+
     .page5-content h2 {
         font-size: 2rem;
+    }
+    .page7-header-main h1 {
+        font-size: 2.2rem;
+    }
+    .swiper {
+        margin-top: -25px;
+    }
+    .page7-header-main h2 {
+        font-size: 11vw;
+    }
+    .hero-cursor{
+        display: none;
     }
 }
 
@@ -792,7 +919,7 @@ nav h1 {
         justify-content: center;
     }
 
-    .page2-main p ,.page4-main p{
+    .page2-main p, .page4-main p, .page6-main p {
         font-size: 7vw;
         line-height: 9vw;
     }
@@ -800,12 +927,26 @@ nav h1 {
     .page3-header-box h1 span {
         font-size: 13vw;
     }
-    .page3-grid-box{
+
+    .page3-grid-box {
         width: 90%;
         height: 60vh;
     }
-    .page4-header h1 {
+
+    .page4-header h1, .page6-header h1 {
         font-size: 2rem;
+    }
+    .swiper {
+        margin-top: -25px;
+    }
+    .swiper-slide {
+        width: 45vw;
+    }
+    .page7-header h1{
+        text-align: right;
+    }
+    .page7-header-main h2 {
+        font-size: 16vw;
     }
 
 }

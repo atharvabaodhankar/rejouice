@@ -195,7 +195,6 @@ function page3Animation() {
     });
   };
 
-
   if (window.matchMedia("(max-width : 500px)").matches) {
     document.querySelector(
       ".page3-header-text"
@@ -341,26 +340,97 @@ function page4Animation() {
 function page5Animation() {
   gsap.to("#page5 svg", {
     rotate: "200deg",
-    duration : 3,
+    duration: 3,
     scrollTrigger: "#page5",
     ease: "power2",
   });
   gsap.from(".page5-span", {
     opacity: 0,
-    y : -100,
+    y: -100,
     scrollTrigger: {
       trigger: "#page5",
       start: "top 60%",
       end: "top 40%",
       scroller: "body",
-      scrub : 3,
-    }
-  })
-
+      scrub: 3,
+    },
+  });
 }
-mouseHover();
+function page6Animation() {
+  gsap.from(".page6-hr", {
+    width: "0%",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-header",
+      scrub: 2,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+  gsap.from(".page6-header h1", {
+    y: 100,
+    opacity: 0,
+    skewX: 10,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-header",
+      scrub: 2,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+  gsap.from(".page6-main p span", {
+    y: 100,
+    skewX: 10,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-main",
+      scrub: 2,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+}
+function page7Animation() {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+    grabCursor: true,
+    loop: {
+      enabled: true,
+      loopedSlides: 5,
+      slideShadows: true,
+    },
+    autoplay: {
+      delay: 2000,
+    },
+    freeMode: true,
+  });
+
+  gsap.from(".page7-header-main h2 , .page7-header-main h1", {
+    y: 100,
+    skewX: 10,
+    opacity: 0,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page6-main",
+      scrub: 4,
+      start: "top 60%",
+      end: "bottom 60%",
+    },
+  });
+}
+
+if (window.matchMedia("(min-width : 750px)").matches) {
+  mouseHover();
+}
 menuAnimation();
 page2Animation();
 page3Animation();
 page4Animation();
 page5Animation();
+page6Animation();
+page7Animation();
