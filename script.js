@@ -424,6 +424,35 @@ function page7Animation() {
   });
 }
 
+function page8Animation() {
+  let page8Section = document.querySelector("#page8");
+  let page8Cursor = document.querySelector(".page8-cursor");
+  let page8H1 = document.querySelector(".page8-main");
+
+  page8Section.addEventListener("mousemove", (dets) => {
+    gsap.to(page8Cursor, {
+      left: dets.x,
+      top : dets.y
+      })
+  })
+  page8H1.addEventListener("mousemove", () => {
+    gsap.to(page8Cursor, {
+      scale: 10,
+      backgroundColor : "#dbdada",
+    })
+   
+  })
+  page8H1.addEventListener("mouseleave", () => {
+    gsap.to(page8Cursor, {
+      scale: 1,
+      backgroundColor : "#00000079",
+    })
+    
+  })
+  
+  
+}
+
 if (window.matchMedia("(min-width : 750px)").matches) {
   mouseHover();
 }
@@ -434,3 +463,4 @@ page4Animation();
 page5Animation();
 page6Animation();
 page7Animation();
+page8Animation();
