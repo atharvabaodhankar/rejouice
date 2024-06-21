@@ -449,10 +449,48 @@ function page8Animation() {
     })
     
   })
+  gsap.from(".page8-main", {
+    y: 200,
+    opacity : 0,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#page8",
+      scrub: 1,
+      start: "top 60%",
+      end: "40% 60%",
+    },
+
+  })
   
   
 }
-
+function footerAnimation() {
+  gsap.from(".footer-upper", {
+    yPercent: -100,
+    opacity : 0.7,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#footer",
+      scrub: 3,
+      start: "top 80%",
+      end: "40% 80%",
+    },
+  })
+  gsap.from(".footer-lower-h1 h1 span", {
+    yPercent: -100,
+    opacity: 0,
+    stagger: 0.4,
+    ease : "easeInOut",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: "#footer",
+      scrub: 5,
+      start: "top 50%",
+      end: "60% 80%",
+      markers : true
+    },
+  })
+}
 if (window.matchMedia("(min-width : 750px)").matches) {
   mouseHover();
 }
@@ -464,3 +502,4 @@ page5Animation();
 page6Animation();
 page7Animation();
 page8Animation();
+footerAnimation();

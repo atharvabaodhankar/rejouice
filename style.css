@@ -800,6 +800,7 @@ nav h1 {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    z-index: 3;
 }
 .page8-main h2{
     font-size: 2.5rem;
@@ -842,7 +843,94 @@ nav h1 {
     mix-blend-mode: difference;
     left: 0;
 }
+/* Footer */
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0;
+    background-color: #000;
+    overflow: hidden;
+}
+.footer-upper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    color: #d8d8d8;
+}
+.footer-left{
+    text-align: left;
+}
+.footer-left h1{
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 3rem;
+}
+.footer-left .btn-main{
+    color: #d8d8d8;
+    border: 2px solid #d8d8d8;
+}
+.footer-left .btn-main::after{
+    background-color: #d8d8d8;
+}
+.footer-left .btn-main:hover{
+    color: #000;
+}
+.footer-right{
+    display: flex;
+}
+.footer-right ul{
+    list-style: none;
+}
+.footer-right ul li a{
+    font-size: 2rem;
+    color: #d8d8d8;
+}
+.footer-right ul li a h1{
+    font-weight: 200;
+}
+.footer-right ul li a h1 span{
+    background-color: #d8d8d8;
+    height: 2px;
+}
+.footer-right .navbar-footer-right a {
+    color: #d8d8d8;
+    margin-bottom: 1rem;
+}
+.footer-right .navbar-footer-right {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 4vw;
+}
 
+.footer-right .navbar-footer-right a h1{
+    font-weight: 200;
+}
+
+.footer-right .navbar-footer-right a h1 span{
+    background-color: #d8d8d8;
+}
+.footer-lower{
+    width: 90%;
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+.footer-lower-h1{
+    height: 28vw;
+    overflow: hidden;
+}
+.footer-lower-h1 h1{
+    display: flex;
+    height: 18vw;
+    font-size: 26vw;
+}
+.footer-lower h1 span{
+    color: #fff;
+    font-family: rejouice;
+}
 
 @media screen and (max-width: 900px) {
     .navbar-box {
@@ -907,6 +995,20 @@ nav h1 {
     .page8-main h1 {
         font-size: 12vw;
         height: 15vw;
+    }
+    .footer-left h1 {
+        font-size: 3rem;
+    }
+    .footer-upper{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .footer-right{
+        margin-top: 4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
@@ -1020,6 +1122,9 @@ nav h1 {
     .page8-main h1 {
         font-size: 16vw;
         height: 20vw;
+    }
+    .footer-upper {
+        width: 85%;
     }
 
 }
