@@ -3,6 +3,63 @@ var heroSection = document.querySelector(".hero-content");
 var heroSectionMain = document.querySelector("#hero");
 var menuBar = document.querySelector(".menu");
 
+var HeroTimeline = gsap.timeline();
+
+HeroTimeline.from(
+  ".loader-h1",
+  {
+    x: -200,
+    opacity: 0,
+    duration: 2,
+  },
+  "HeroH1"
+);
+HeroTimeline.from(
+  ".loader-h1-2 ",
+  {
+    x: 200,
+    opacity: 0,
+    duration: 2,
+  },
+  "HeroH1"
+);
+HeroTimeline.to(
+  ".loader-h1",
+  {
+    x: 100,
+    opacity: 0,
+    duration: 1,
+  },
+  "HeroH1End"
+);
+HeroTimeline.to(
+  ".loader-h1-2 ",
+  {
+    x: -100,
+    opacity: 0,
+    duration: 1,
+  },
+  "HeroH1End"
+);
+HeroTimeline.to("#loader", {
+  opacity: 0,
+});
+HeroTimeline.to("#loader", {
+  display: "none",
+});
+HeroTimeline.from(".hero-h1", {
+  skewY: 10,
+  yPercent : 70,
+  opacity: 0,
+  duration: 1,
+})
+HeroTimeline.from(".hero-video", {
+  filter: "brightness(0)",
+  duration: 1,
+  
+});
+
+
 function mouseHover() {
   heroSection.addEventListener("mousemove", (dets) => {
     gsap.to(heroCursor, {
@@ -432,26 +489,24 @@ function page8Animation() {
   page8Section.addEventListener("mousemove", (dets) => {
     gsap.to(page8Cursor, {
       left: dets.x,
-      top : dets.y
-      })
-  })
+      top: dets.y,
+    });
+  });
   page8H1.addEventListener("mousemove", () => {
     gsap.to(page8Cursor, {
       scale: 10,
-      backgroundColor : "#dbdada",
-    })
-   
-  })
+      backgroundColor: "#dbdada",
+    });
+  });
   page8H1.addEventListener("mouseleave", () => {
     gsap.to(page8Cursor, {
       scale: 1,
-      backgroundColor : "#00000079",
-    })
-    
-  })
+      backgroundColor: "#00000079",
+    });
+  });
   gsap.from(".page8-main", {
     y: 200,
-    opacity : 0,
+    opacity: 0,
     scrollTrigger: {
       scroller: "body",
       trigger: "#page8",
@@ -459,15 +514,12 @@ function page8Animation() {
       start: "top 60%",
       end: "40% 60%",
     },
-
-  })
-  
-  
+  });
 }
 function footerAnimation() {
   gsap.from(".footer-upper", {
     yPercent: -100,
-    opacity : 0.7,
+    opacity: 0.7,
     scrollTrigger: {
       scroller: "body",
       trigger: "#footer",
@@ -475,21 +527,20 @@ function footerAnimation() {
       start: "top 80%",
       end: "40% 80%",
     },
-  })
+  });
   gsap.from(".footer-lower-h1 h1 span", {
     yPercent: -100,
     opacity: 0,
     stagger: 0.4,
-    ease : "easeInOut",
+    ease: "easeInOut",
     scrollTrigger: {
       scroller: "body",
       trigger: "#footer",
       scrub: 5,
       start: "top 50%",
       end: "60% 80%",
-      markers : true
     },
-  })
+  });
 }
 if (window.matchMedia("(min-width : 750px)").matches) {
   mouseHover();

@@ -128,6 +128,7 @@ p {
     left: 0;
     object-fit: cover;
     position: absolute;
+    filter:brightness(1);
 }
 
 .hero-content {
@@ -931,6 +932,34 @@ nav h1 {
     color: #fff;
     font-family: rejouice;
 }
+/* Loader */
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+.loader{
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.loader h1{
+    font-size: 7vw;
+    font-weight: 200;
+}
+.loader h1 span{
+    font-family: rejouice;
+}
 
 @media screen and (max-width: 900px) {
     .navbar-box {
@@ -1121,7 +1150,7 @@ nav h1 {
     }
     .page8-main h1 {
         font-size: 16vw;
-        height: 20vw;
+        height: 18vw;
     }
     .footer-upper {
         width: 85%;
